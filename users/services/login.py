@@ -13,7 +13,7 @@ def login_analyst(data):
     user = authenticate(email=email, password=password)
 
     if user is None:
-        raise InvalidLoginCredentialsException("Invalid credentials.")
+        raise InvalidLoginCredentialsException(f"Invalid credentials. email = {email}")
 
     refresh = RefreshToken.for_user(user)
     return {

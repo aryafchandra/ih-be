@@ -12,7 +12,7 @@ import json
 
 @require_POST
 @api_view(['POST'])
-
+@permission_classes([AllowAny])
 def serve_register_analyst(request):
     """
         request_data must contain:
